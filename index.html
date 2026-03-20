@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAPNE - Núcleo de Atendimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <div>
+                    <strong>NAPNE</strong>
+                    <span>Núcleo de Atendimento</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+                    <button id="btn-contrast" aria-label="Alto Contraste"><i class="fas fa-adjust"></i></button>
+                    <button id="btn-decrease" aria-label="Diminuir fonte">A-</button>
+                    <button id="btn-increase" aria-label="Aumentar fonte">A+</button>
+                </div>
+                <a href="login.html" class="btn btn-outline">
+                    <i class="far fa-user"></i> Entrar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>Inclusão que Transforma:<br>NAPNE</h1>
+            <p>Núcleo de Atendimento para Pessoas com Necessidades Educacionais Específicas</p>
+            <a href="formulario.html" class="btn btn-primary">Solicitar Atendimento ou Recurso &rarr;</a>
+        </section>
+
+        <section class="services bg-light">
+            <div class="container">
+                <h2>Como podemos ajudar?</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Ledor/Transcritor</h3>
+                        <p>Auxílio na leitura e transcrição de materiais para estudantes com deficiência visual.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Intérprete de LIBRAS</h3>
+                        <p>Interpretação em Língua Brasileira de Sinais para estudantes surdos.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Adaptação de Material</h3>
+                        <p>Conversão e adaptação de materiais didáticos para formatos acessíveis.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about container">
+            <h2>Sobre o NAPNE</h2>
+            <div class="about-text">
+                <p>O NAPNE é um núcleo comprometido com a promoção da inclusão e acessibilidade no ambiente educacional.
+                    Trabalhamos para garantir que todos os estudantes tenham as mesmas oportunidades de aprendizado.</p>
+                <p>Nossa equipe está preparada para atender às necessidades específicas de cada estudante, oferecendo
+                    recursos, adaptações e suporte personalizado.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Precisa de Atendimento?</h2>
+                <p>Nossa equipe está pronta para atender você. Faça sua solicitação e entraremos em contato o mais breve
+                    possível.</p>
+                <a href="formulario.html" class="btn btn-light">Fazer Solicitação &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-light">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="far fa-envelope"></i> napne@instituicao.edu.br</li>
+                    <li><i class="fas fa-phone"></i> (00) 0000-0000</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Localização</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Principal - Bloco A, Sala 101</li>
+                    <li><i class="far fa-clock"></i> Segunda a Sexta, 08:00 às 18:00</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Acessibilidade Digital</h4>
+                <ul>
+                    <li><i class="far fa-check-circle"></i> Conforme WCAG 2.1 AA</li>
+                </ul>
+                <div class="compliance-box">
+                    Este site foi desenvolvido seguindo as diretrizes de acessibilidade digital.
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NAPNE - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

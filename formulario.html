@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Atendimento - NAPNE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <div>
+                    <strong>NAPNE</strong>
+                    <span>Núcleo de Atendimento</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="index.html">Sobre</a></li>
+                    <li><a href="index.html">Serviços</a></li>
+                    <li><a href="index.html">Recursos</a></li>
+                    <li><a href="index.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+                    <button id="btn-constrast" aria-label="Alto Contraste"><i class="fas fa-adjust"></i></button>
+                    <button id="btn-decrease" aria-label="Diminuir fonte">A-</button>
+                    <button id="btn-increase" aria-label="Aumentar fonte">A+</button>
+                </div>
+                <a href="login.html" class="btn btn-outline">
+                    <i class="far fa-user"></i> Entrar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-header">
+            <h1>Solicitação de Atendimento/Recurso Inclusivo</h1>
+            <p>Preencha as informações abaixo para que nossa equipe possa analisar sua demanda.</p>
+        </div>
+
+        <form action="#" class="request-form">
+
+            <section class="form-section">
+                <h2>Dados do Estudante</h2>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" class="form-control" required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="cpf_aluno">CPF *</label>
+                        <input type="text" id="cpf_aluno" class="form-control" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="matricula">Matrícula *</label>
+                        <input type="text" id="matricula" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="curso">Curso *</label>
+                        <input type="text" id="curso" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp *</label>
+                        <input type="tel" id="whatsapp" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Detalhes da Necessidade</h2>
+
+                <div class="form-group">
+                    <label for="tipo_deficiencia">Tipo de Deficiência/Condição *</label>
+                    <select id="tipo_deficiencia" class="form-control" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="visual">Deficiência Visual</option>
+                        <option value="auditiva">Deficiência Auditiva / Surdez</option>
+                        <option value="motora">Deficiência Física / Motora</option>
+                        <option value="intelectual">Deficiência Intelectual</option>
+                        <option value="tea">Transtorno do Espectro Autista (TEA)</option>
+                        <option value="tdah">TDAH ou outros transtornos de aprendizagem</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descreva sua necessidade específica ou o recurso solicitado *</label>
+                    <textarea id="descricao" class="form-control" rows="5"
+                        placeholder="Descreva detalhadamente sua necessidade, incluindo informações como: disciplinas que necessita de apoio, tipo de material que precisa ser adaptado, horários de preferência para atendimento, etc."
+                        required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Arquivos e Documentos</h2>
+                <div class="form-group">
+                    <label>Anexar Laudo Médico ou Documentos Comprobatórios</label>
+                    <span class="help-text">Formatos aceitos: PDF, JPG, PNG (Máximo 10MB por arquivo)</span>
+
+                    <div class="upload-zone">
+                        <input type="file" id="arquivo" hidden accept=".pdf,.jpg,.jpeg,.png" multiple>
+                        <label for="arquivo" class="upload-label">
+                            <i class="fas fa-file-upload"></i>
+                            <span>Clique para selecionar arquivos ou arraste e solte aqui</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-outline">
+                    <i class="far fa-save"></i> Salvar Rascunho
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="far fa-paper-plane"></i> Enviar Solicitação
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="footer bg-light">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="far fa-envelope"></i> napne@instituicao.edu.br</li>
+                    <li><i class="fas fa-phone"></i> (00) 0000-0000</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Localização</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Principal - Bloco A, Sala 101</li>
+                    <li><i class="far fa-clock"></i> Segunda a Sexta, 08:00 às 18:00</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Acessibilidade Digital</h4>
+                <ul>
+                    <li><i class="far fa-check-circle"></i> Conforme WCAG 2.1 AA</li>
+                </ul>
+                <div class="compliance-box">
+                    Este site foi desenvolvido seguindo as diretrizes de acessibilidade digital.
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NAPNE - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

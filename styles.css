@@ -1,0 +1,277 @@
+/* =========================================
+   VARIÁVEIS E RESET
+   ========================================= */
+:root {
+    --primary-color: #1a8b3d;
+    --primary-hover: #146c2f;
+    --text-main: #333333;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --bg-light: #f9f9f9;
+    --border-color: #e0e0e0;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que os paddings não quebrem o tamanho das caixas */
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bg-light { background-color: var(--bg-light); }
+
+/* =========================================
+   COMPONENTES GLOBAIS (Botões e Cards)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary { background-color: var(--primary-color); color: var(--bg-white); border: none; }
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-outline { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
+.btn-outline:hover { background-color: var(--primary-color); color: var(--bg-white); }
+
+.btn-light { background-color: var(--bg-white); color: var(--primary-color); border: none; }
+.btn-light:hover { background-color: var(--bg-light); }
+
+.btn-block { width: 100%; display: block; font-size: 1.1rem; padding: 14px; }
+
+/* Estilo Base para os Cards e Formulários (com padding removido daqui para focar na borda) */
+.service-card, .login-card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilo Base para todos os Inputs de formulário */
+.form-control, .input-container input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-main);
+    background-color: var(--bg-white);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .input-container input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 139, 61, 0.1);
+}
+
+/* =========================================
+   CABEÇALHO (Header)
+   ========================================= */
+.header { border-bottom: 1px solid var(--border-color); padding: 15px 0; background: var(--bg-white); }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { display: flex; align-items: center; gap: 10px; color: var(--primary-color); }
+.logo-icon {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    width: 40px; height: 40px;
+    display: flex; justify-content: center; align-items: center;
+    font-weight: bold; font-size: 20px; border-radius: 4px;
+}
+.logo span { display: block; font-size: 12px; color: var(--text-light); }
+
+.main-nav ul { display: flex; gap: 30px; }
+.main-nav a:hover { color: var(--primary-color); font-weight: 500; }
+
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.accessibility-tools { display: flex; gap: 10px; }
+.accessibility-tools button {
+    background: none; border: 1px solid var(--border-color); border-radius: 50%;
+    width: 35px; height: 35px; cursor: pointer; font-size: 14px; color: var(--text-main);
+}
+.accessibility-tools button:hover { background-color: var(--bg-light); }
+
+.back-link { color: var(--primary-color); font-weight: 500; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+.back-link:hover { color: var(--primary-hover); }
+
+/* =========================================
+   PÁGINA INICIAL (Home)
+   ========================================= */
+.hero, .about, .cta, .services { text-align: center; }
+.hero { padding: 80px 20px; }
+.hero h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; line-height: 1.2; }
+.hero p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; }
+
+.services { padding: 60px 0; }
+.services h2, .about h2 { margin-bottom: 40px; font-size: 1.8rem; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.service-card { padding: 30px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+.service-card:hover { transform: translateY(-5px); }
+.card-icon { background-color: #e8f5e9; color: var(--primary-color); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 24px; margin-bottom: 20px; }
+.service-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.service-card p { color: var(--text-light); font-size: 0.95rem; }
+
+.about { padding: 60px 20px; }
+.about-text { max-width: 800px; margin: 0 auto; color: var(--text-light); }
+.about-text p { margin-bottom: 15px; }
+
+.cta { background-color: var(--primary-color); color: var(--bg-white); padding: 60px 20px; }
+.cta h2 { font-size: 2rem; margin-bottom: 15px; }
+.cta p { margin-bottom: 30px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* =========================================
+   RODAPÉ (Footer)
+   ========================================= */
+.footer { padding: 60px 0 20px; border-top: 1px solid var(--border-color); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+.footer-col h4 { color: var(--primary-color); margin-bottom: 20px; }
+.footer-col ul li { margin-bottom: 10px; color: var(--text-light); display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+.footer-col ul li i { color: var(--primary-color); }
+.compliance-box { margin-top: 15px; padding: 10px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.8rem; color: var(--text-light); background: var(--bg-white); }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-light); }
+
+/* =========================================
+   TELA DE LOGIN
+   ========================================= */
+.login-wrapper { display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 75px); padding: 40px 20px; }
+.login-card { width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+
+.login-header-text, .form-header { text-align: center; margin-bottom: 30px; }
+.login-header-text h1, .form-header h1 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 5px; }
+.form-header h1 { font-size: 2rem; color: var(--primary-color); margin-bottom: 10px; }
+.login-header-text p, .form-header p { color: var(--text-light); font-size: 0.95rem; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.9rem; color: var(--text-main); }
+
+.input-container { position: relative; display: flex; align-items: center; }
+.input-icon { position: absolute; left: 15px; color: #999; font-size: 1.1rem; }
+.input-container input { padding-left: 45px; }
+
+.toggle-password { position: absolute; right: 15px; background: none; border: none; color: #999; cursor: pointer; font-size: 1.1rem; }
+.toggle-password:hover { color: var(--text-main); }
+
+.forgot-password { text-align: right; margin-bottom: 25px; margin-top: -10px; }
+.register-link { text-align: center; margin-top: 25px; font-size: 0.95rem; color: var(--text-light); }
+
+.forgot-password a, .register-link a { color: var(--primary-color); font-weight: 500;}
+.forgot-password a:hover, .register-link a:hover { text-decoration: underline; }
+
+/* =========================================
+   TELA DE FORMULÁRIO (CORRIGIDA)
+   ========================================= */
+.form-header { padding: 40px 20px 20px; }
+.request-form { max-width: 800px; margin: 0 auto 60px; }
+
+/* O padding: 40px resolve o problema do texto encostando nas bordas! */
+.form-section {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 40px; 
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.form-section h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+textarea.form-control { resize: vertical; min-height: 120px; }
+.form-control::placeholder { color: #9ca3af; font-weight: 400; }
+
+.help-text { display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; margin-top: -4px; }
+
+.upload-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+.upload-zone:hover { background-color: #f0fdf4; border-color: var(--primary-color); }
+.upload-label { cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px; color: var(--primary-color); font-weight: 500; }
+.upload-label i { font-size: 2.5rem; color: #94a3b8; transition: color 0.3s; }
+.upload-zone:hover .upload-label i { color: var(--primary-color); }
+
+.form-actions { display: flex; justify-content: flex-end; gap: 15px; margin-top: 20px; }
+.form-actions .btn { display: flex; align-items: center; gap: 8px; padding: 14px 28px; }
+
+/* =========================================
+   RESPONSIVIDADE (Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; gap: 20px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .form-grid-2 { grid-template-columns: 1fr; gap: 0; }
+    .form-actions { flex-direction: column; }
+    .form-actions .btn { width: 100%; justify-content: center; }
+    .form-section { padding: 20px; } /* Ajuste de espaçamento para telas menores */
+}
+
+/* =========================================
+   MODO ALTO CONTRASTE (ACESSIBILIDADE)
+   ========================================= */
+body.high-contrast {
+    /* Sobrescrevendo as variáveis de cor para o modo escuro/contraste */
+    --primary-color: #ffff00; /* Amarelo bem forte para links e destaques */
+    --primary-hover: #e6e600;
+    --text-main: #ffffff; /* Texto principal branco */
+    --text-light: #cccccc; /* Texto secundário cinza claro */
+    --bg-white: #000000; /* Fundo principal preto */
+    --bg-light: #121212; /* Fundo secundário quase preto */
+    --border-color: #ffff00; /* Bordas amarelas para destacar bem os limites */
+}
+
+/* Ajustes específicos para garantir que os inputs e cards fiquem bons no contraste */
+body.high-contrast input, 
+body.high-contrast textarea,
+body.high-contrast .upload-zone {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+body.high-contrast .btn-primary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+body.high-contrast .btn-primary:hover {
+    background-color: var(--primary-color);
+    color: #000000;
+}
