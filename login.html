@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-light"> <header class="header">
+
+<body class="bg-light">
+    <header class="header">
         <div class="container header-content">
             <div class="logo">
                 <div class="logo-icon">N</div>
@@ -17,7 +20,11 @@
                     <span>Núcleo de Atendimento</span>
                 </div>
             </div>
-            
+            <div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+                <button id="btn-contrast" aria-label="Alto Contraste">🌓</button>
+                <button id="btn-decrease" aria-label="Diminuir fonte">A-</button>
+                <button id="btn-increase" aria-label="Aumentar fonte">A+</button>
+            </div>
             <a href="index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Voltar para a Home
             </a>
@@ -44,7 +51,8 @@
                     <label for="senha">Senha</label>
                     <div class="input-container">
                         <i class="fas fa-lock input-icon"></i>
-                        <input type="password" id="senha" placeholder="Digite sua senha" required aria-label="Digite sua senha">
+                        <input type="password" id="senha" placeholder="Digite sua senha" required
+                            aria-label="Digite sua senha">
                         <button type="button" class="toggle-password" aria-label="Mostrar senha">
                             <i class="far fa-eye"></i>
                         </button>
@@ -63,6 +71,7 @@
             </form>
         </div>
     </main>
-
+    <script src="script.js"></script>
 </body>
+
 </html>

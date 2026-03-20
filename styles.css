@@ -259,6 +259,7 @@ body.high-contrast {
 /* Ajustes específicos para garantir que os inputs e cards fiquem bons no contraste */
 body.high-contrast input, 
 body.high-contrast textarea,
+body.high-contrast select,
 body.high-contrast .upload-zone {
     background-color: #000000;
     color: #ffffff;
